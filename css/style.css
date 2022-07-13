@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:wght@300;700&family=Redressed&display=swap');
+
+/*
+font-family: 'Lato', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Redressed', cursive; */
+*{
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    z-index: 98;
+}
+
+html {
+    background-color: rgb(212, 212, 212);
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+main {
+    margin-bottom: 50px;
+    box-sizing: border-box;
+    margin-top: 80px;
+}
+
+#logo {
+    position: absolute;
+    top: 10px;
+    left: 9.5%;
+}
+
+#logo img {
+    width: 50px;
+}
+
+/* navbar */
+header{
+    height: 80px;
+    background-color: #161616;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+}
+
+.bar {
+    position: fixed;
+    z-index: 99;
+    top: 15px;
+    right: 10%;
+    display: none;
+}
+
+.img-bar {
+    border-radius: 10%;
+    background-color: rgb(179, 172, 172);
+    width: 50px;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    list-style: none;
+    position: relative;
+}
+
+#navbar li {
+    margin: 0px 10px;
+    padding: 10px;
+}
+
+
+#navbar .nav-link {
+    text-decoration: none;
+    color: antiquewhite;
+    transition: .5s;
+    font-size: 14px;
+}
+
+#navbar .nav-link:hover{
+    color: #a7a2a2;
+}
+
+/* footer */
+
+footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+    background-color: #000;
+    color:  #fff;
+    padding: 30px 0;
+}
+
+/* home */
+#title-container {
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 30px;
+    box-sizing: border-box;
+}
+
+
+#title-container  h1 {
+    font-size: 50px;
+}
+
+#title-container  p {
+    margin-top: 10px;
+    text-transform: uppercase;
+    color: rgb(80, 19, 19);
+}
+
+/* posts */
+#posts-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;    
+}
+
+.post-box:first-child {
+    min-width: 100%;
+}
+
+.post-box {
+    flex: 1 1 0;
+    margin: 0 1%;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.post-box:nth-child(n+2):hover {
+    transform: scale(1.1);
+}
+
+.post-box:nth-child(n+2) {
+    box-shadow: 1px 5px 13px black;
+    padding-bottom: 20px;
+    margin-top: 20px;
+}
+
+.post-box img {
+    width: 100%;
+    transition: 0.5s;
+}
+
+.post-box .post-title{
+    font-size: 24px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.post-box .post-title a {
+    color: black;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.post-box .post-title a:hover {
+    color: rgb(104, 101, 101);
+}
+
+.post-box .post-description {
+    color: rgb(68, 70, 70);
+    text-align: center;
+    padding: 0 9px;
+}
+
+.post-box .tags-container {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.post-box .tags-container a {
+    font-size: 14px;
+    margin: 3px;
+    color: rgb(61, 22, 233);
+    display: inline-block;
+}
+/* post */
+#post-container {
+    display: grid;
+    grid-template-columns: 75% 25%;
+    grid-template-rows: auto;
+    grid-template-areas: "main sidebar";
+    gap: 10px;
+    padding-top: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-bottom: 200px;
+    margin-top: 80px;
+
+}
+
+.content-container {
+    grid-area: main;
+}
+
+#main-title {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+#post-description2 {
+    font-style: italic;
+    margin-bottom: 40px;
+}
+
+.img-container {
+    max-width: 90%;
+
+}
+
+.img-container img {
+    width: 60%;
+    margin-bottom: 30px;
+}
+
+.post-content{
+    line-height: 1.8;
+    margin: 10px 0;
+
+}
+
+/* post aside */
+#nav-container{
+    grid-area: sidebar;
+}
+
+#categories-title, #tags-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    background-color: #000;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-weight: 300;
+    margin-top: 10px;
+}
+
+.tag-list , #categories-list {
+    list-style: none;
+}
+
+.tag-list li, #categories-list li {
+    margin-bottom: 10px;
+}
+
+.tag-list a, #categories-list a{
+    color: #666;
+    transition: .5s;
+}
+
+.tag-list a:hover, #categories-list a:hover {
+    color: #000;
+}
+
+#navbar.mostra {
+    right: 0px;
+} 
+
+#sobre {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 150px;
+    border: solid 1px black;
+    padding: 15px;
+    background-color: #9c9c9c;
+    
+}
+
+#sobre p{
+    line-height: 1.8;
+    margin-bottom: 40px;
+    font-weight: 500;
+    color: #fff;
+}
+
+#sobre h3 {
+    background-color: aqua;
+    height: 50px;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+#frase {
+    color: rgb(110, 231, 141);
+    line-height: 2.8;
+}
+
+#explica {
+    transition: 1s;
+    background-color: rgb(219, 217, 217);
+    width: 50%;
+    display: none;
+}
+
+#explica.mostra2 {
+    padding: 10px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+@media (max-width: 600px) {
+    #title-container {
+        min-width: 250px;
+    }
+
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        justify-content: right;
+        background-color: #000;
+        position: absolute;
+        top: 80px;
+        right: -500px;
+        height: 60vh;
+        width: 80%;
+        transition: 1s;
+    }
+
+
+    #navbar li {
+        margin: 10px 0px;
+    }
+
+    #navbar li a {
+        padding: 10px 0px;
+    }
+
+    .bar {
+        display: block;
+        cursor: pointer;
+    }
+    #explica, #sobre h3 {
+        width: 90%;
+    }
+
+    #posts-container {
+        margin-top: 20px;
+    }
+
+    .post-box:nth-child(n+1) {
+        flex: 100% 1 0;
+    }
+
+    .post-box:hover{
+        transform: scale(1.0);
+    }
+
+    /* post */
+    #post-container {
+        grid-template-columns: 100%;
+        padding: 15px;
+        grid-template-areas: "main"
+        "sidebar";
+    }
+
+    .img-container img{
+        width: 100%;
+    }
+    
+
+
+
+}
